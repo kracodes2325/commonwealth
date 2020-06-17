@@ -23,6 +23,7 @@ import NotificationsController from './controllers/server/notifications';
 import WebsocketController from './controllers/server/socket';
 import TagsController from './controllers/server/tags';
 import ChainEntityController from './controllers/server/chain_entities';
+import LoginController from './controllers/app/lg';
 
 export enum ApiStatus {
   Disconnected = 'disconnected',
@@ -50,6 +51,7 @@ export interface IApp {
   reactions: ReactionsController;
   tags: TagsController;
   chainEntities: ChainEntityController;
+  lg: LoginController;
 
   // XXX: replace this with some app.chain helper
   activeChainId(): string;
